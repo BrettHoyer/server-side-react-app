@@ -1,4 +1,4 @@
-# Server-Side React App with Yugabyte Cloud
+# Server-Side Rendered React App with Yugabyte Cloud
 
 A Server-Side Rendered React App deployed on Heroku connected to [Yugabyte Cloud](https://elements.heroku.com/addons/yugabyte-cloud).
 
