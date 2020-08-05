@@ -3,10 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = window.APP_STATE
-  }
 
   componentDidMount() {
     fetch('/api/users').then((resp) => {

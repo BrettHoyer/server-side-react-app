@@ -8,7 +8,8 @@ import { Client } from 'pg';
 import App from '../src/App';
 
 const PORT = process.env.PORT || 5000;
-const client = new Client(process.env.YUGABYTE_CLOUD_DATABASE_URL);
+const dbUrl = process.env.YUGABYTE_CLOUD_DATABASE_URL;
+const client = new Client(dbUrl);
 client.connect()
 const app = express();
 
@@ -37,8 +38,6 @@ app.get('/', (req, res) => {
 
     return res.send(
       data.replace('<div id="root"></div>', `<div id="root">${app}</div>`)
-          // Use global variable on window to inject state into React app
-          // .replace('<script>window.APP_STATE = {}</script>', `<script>window.APP_STATE = ${}</script>`)
     );
   });
 });
