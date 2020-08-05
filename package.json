@@ -7,6 +7,8 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
     "pg": "^8.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -19,9 +21,10 @@
     "eject": "react-scripts eject",
     "dev:build-server": "NODE_ENV=development webpack --config webpack.server.js --mode=development -w",
     "deploy:build-server": "NODE_ENV=production webpack --config webpack.server.js",
-    "server:start": "nodemon ./server-build/index.js",
-    "dev": "npm run build && npm run dev:build-server && npm run server:start",
-    "deploy": "npm run build && npm run deploy:build-server && npm run server:start"
+    "dev:start": "nodemon ./server-build/index.js",
+    "deploy:start": "node ./server-build/index.js",
+    "dev": "npm-run-all --parallel build dev:*",
+    "deploy": "npm run build && npm run deploy:build-server && npm run deploy:start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,7 +48,6 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^4.2.0",
     "ignore-styles": "^5.0.1",
-    "nodemon": "^2.0.4",
     "svg-url-loader": "^6.0.0",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.12",
