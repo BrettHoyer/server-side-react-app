@@ -1,6 +1,7 @@
 {
     "name": "Yugabyte Cloud with React and Node.js",
     "description": "Server-Side Rendered React App with Express, Node.js, and Yugabyte Cloud example",
+    "logo": "https://avatars0.githubusercontent.com/u/17074854?s=200&v=4",
     "image": "heroku/nodejs",
     "repository": "https://github.com/mongolab/hello-mongoose.git",
     "keywords": ["node", "postgres", "react", "yugabyte-cloud", "express"],
